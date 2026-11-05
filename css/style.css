@@ -145,8 +145,13 @@ nav a:hover {
     overflow-y: auto;
     background-color: white;
     border-left: 5px solid #7a2e3a;
-    scrollbar-width: thin;
-    scrollbar-color: #7a2e3a hsl(38, 50%, 92%);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    #about {
+        scrollbar-width: thin;
+        scrollbar-color: #7a2e3a hsl(38, 50%, 92%);
+    }
 }
 
 #about h2 {
