@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог послуг ательє «Голка та Нитка»: терміни, ціни, тканини та умови догляду за виробами.">
+    <title>Каталог сервісів - Голка та Нитка</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/services.js" defer></script>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header p {
+            margin: 0;
+        }
+
+        body {
+            padding-top: 110px;
+        }
+
+        main {
+            padding: 10px 30px 30px;
+        }
+
+        main > ol {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 0;
+            list-style: none;
+        }
+
+        main > ol > hr {
+            display: none;
+        }
+
+        main article {
+            height: 100%;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid darkgoldenrod;
+            border-top: 3px dotted darkgoldenrod;
+            border-bottom: medium solid darkgoldenrod;
+        }
+
+        article h3 {
+            margin-top: 0;
+        }
+
+        article ul {
+            padding-left: 20px;
+        }
+
+        article li::marker {
+            color: darkgoldenrod;
+        }
+
+        .fabric {
+            font-weight: bold;
+            font-size: 1.15em;
+            font-style: italic;
+            color: #7a2e3a;
+        }
+
+        img[src*="serv"] {
+            display: block;
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        img[src*="serv"]:focus {
+            outline: 3px solid darkgoldenrod;
+            -webkit-animation: to-black-white 1.5s forwards;
+            animation: to-black-white 1.5s forwards;
+        }
+
+        @-webkit-keyframes to-black-white {
+            from { -webkit-filter: grayscale(0%); }
+            to   { -webkit-filter: grayscale(100%); }
+        }
+
+        @keyframes to-black-white {
+            from { filter: grayscale(0%); }
+            to   { filter: grayscale(100%); }
+        }
+
+        a:active,
+        a:active button {
+            color: darkgreen;
+        }
+
+        main > p {
+            text-align: center;
+        }
+
+        @media (max-width: 1100px) {
+            header {
+                grid-template-columns: auto 1fr;
+                padding: 10px 15px;
+            }
+
+            header p,
+            header nav {
+                grid-column: 1 / -1;
+            }
+
+            body {
+                padding-top: 200px;
+            }
+
+            main {
+                padding: 10px 15px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                position: static;
+            }
+
+            body {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Логотип ательє Голка та Нитка" width="50" height="50">
+        <h1>Ательє «Голка та Нитка» - Каталог сервісів</h1>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <span class="menu-title">Пошиття &#9662;</span>
+                    <ul class="submenu">
+                        <li><a href="#serv1">Пошиття на замовлення</a></li>
+                        <li><a href="#serv2">Пошиття за викрійкою клієнта</a></li>
+                        <li><a href="#serv3">Пошиття штор та текстилю для дому</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="menu-title">Ремонт &#9662;</span>
+                    <ul class="submenu">
+                        <li><a href="#serv4">Підгін розміру</a></li>
+                        <li><a href="#serv5">Ремонт блискавок</a></li>
+                        <li><a href="#serv6">Реставрація виробів</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <p><a href="index.html"><button type="button">&larr; На головну сторінку</button></a></p>
+    </header>
+    <main>
+        <h2>Перелік доступних послуг</h2>
+        <ol>
+            <li>
+                <article id="serv1">
+                    <h3>Пошиття на замовлення</h3>
+                    <img src="images/serv1.png" alt="Пошиття на замовлення" width="350" tabindex="0">
+                    <ul>
+                        <li>Термін виконання: 14 днів</li>
+                        <li>Вартість: від 1500 грн</li>
+                        <li><span class="fabric">Тип тканини для пошиття:</span> бавовна, льон, вовна (тканина клієнта або майстерні)</li>
+                        <li>Гарантія: 30 днів</li>
+                        <li>Примірка: до 2 разів</li>
+                    </ul>
+                </article>
+            </li>
+            <hr>
+            <li>
+                <article id="serv2">
+                    <h3>Пошиття за викрійкою клієнта</h3>
+                    <img src="images/serv2.png" alt="Пошиття за викрійкою клієнта" width="350" tabindex="0" loading="lazy">
+                    <ul>
+                        <li>Термін виконання: 10 днів</li>
+                        <li>Вартість: від 1200 грн</li>
+                        <li><span class="fabric">Тип тканини для пошиття:</span> будь-яка тканина клієнта</li>
+                        <li>Гарантія: 30 днів</li>
+                        <li>Консультація з викрійки: безкоштовно</li>
+                    </ul>
+                </article>
+            </li>
+            <hr>
+            <li>
+                <article id="serv3">
+                    <h3>Пошиття штор та текстилю для дому</h3>
+                    <img src="images/serv3.png" alt="Пошиття штор та текстилю для дому" width="350" tabindex="0" loading="lazy">
+                    <ul>
+                        <li>Термін виконання: 12 днів</li>
+                        <li>Вартість: від 900 грн</li>
+                        <li><span class="fabric">Тип тканини для пошиття:</span> блекаут, оксамит, тюль</li>
+                        <li>Гарантія: 30 днів</li>
+                        <li>Виїзд заміру: за домовленістю</li>
+                    </ul>
+                </article>
+            </li>
+            <hr>
+            <li>
+                <article id="serv4">
+                    <h3>Підгін розміру</h3>
+                    <img src="images/serv4.png" alt="Підгін розміру" width="350" tabindex="0" loading="lazy">
+                    <ul>
+                        <li>Термін виконання: 3 дні</li>
+                        <li>Вартість: від 300 грн</li>
+                        <li><span class="fabric">Тип тканини для пошиття:</span> не потрібна (тканина виробу клієнта)</li>
+                        <li>Гарантія: 14 днів</li>
+                        <li>Терміновий підгін: за доплату</li>
+                    </ul>
+                </article>
+            </li>
+            <hr>
+            <li>
+                <article id="serv5">
+                    <h3>Ремонт блискавок</h3>
+                    <img src="images/serv5.png" alt="Ремонт блискавок" width="350" tabindex="0" loading="lazy">
+                    <ul>
+                        <li>Термін виконання: 2 дні</li>
+                        <li>Вартість: від 200 грн</li>
+                        <li><span class="fabric">Тип тканини для пошиття:</span> не потрібна (тканина виробу клієнта)</li>
+                        <li>Гарантія: 14 днів</li>
+                        <li>Заміна повзунка або тасьми</li>
+                    </ul>
+                </article>
+            </li>
+            <hr>
+            <li>
+                <article id="serv6">
+                    <h3>Реставрація виробів</h3>
+                    <img src="images/serv6.png" alt="Реставрація виробів" width="350" tabindex="0" loading="lazy">
+                    <ul>
+                        <li>Термін виконання: 7 днів</li>
+                        <li>Вартість: від 800 грн</li>
+                        <li><span class="fabric">Тип тканини для пошиття:</span> підбирається під виріб (часто потрібна)</li>
+                        <li>Гарантія: 30 днів</li>
+                        <li>Підходить для вінтажних речей</li>
+                    </ul>
+                </article>
+            </li>
+        </ol>
+        <p><a href="index.html"><button type="button">&larr; Повернутися на головну сторінку</button></a></p>
+    </main>
+</body>
+</html>

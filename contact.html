@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форма зворотного зв'язку ательє «Голка та Нитка»: співпраця, пропозиції, скарги та повідомлення про помилки.">
+    <title>Зворотній зв'язок — Голка та Нитка</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/contact.js" defer></script>
+</head>
+<body class="contact">
+    <header>
+        <img src="images/logo.png" alt="Логотип ательє Голка та Нитка" width="50" height="50">
+        <h1>Ательє «Голка та Нитка» — Зворотній зв'язок</h1>
+    </header>
+    <main>
+        <h2>Залиште ваше повідомлення</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Персональна інформація</legend>
+                <p>
+                    <label for="fullname">Прізвище та ім'я:*</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Іванов Іван" required>
+                </p>
+                <p>
+                    <label for="email">E-mail:*</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </p>
+                <p>
+                    <label for="age">Вік:*</label><br>
+                    <input type="number" id="age" name="age" min="16" max="100" placeholder="20" required>
+                </p>
+            </fieldset>
+            <br>
+            <p class="purpose">
+                <label for="purpose">Мета зворотнього зв'язку:*</label><br>
+                <select id="purpose" name="purpose" required>
+                    <option value="" disabled selected>-- Оберіть мету --</option>
+                    <option value="cooperation">Співпраця</option>
+                    <option value="complaint">Скарга на неякісний пошив</option>
+                    <option value="proposal">Пропозиція</option>
+                    <option value="bug">Наявність помилки</option>
+                </select>
+            </p>
+            <p class="details">
+                <label for="details">Детально (макс. 300 символів):*</label><br>
+                <textarea id="details" name="details" rows="6" cols="50" maxlength="300" placeholder="Опишіть ваше питання або деталі замовлення..." required></textarea>
+            </p>
+            <p class="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Я даю згоду на обробку моїх персональних даних</label>
+            </p>
+            <p class="actions">
+                <button type="submit">Надіслати</button>
+                <button type="reset">Очистити</button>
+            </p>
+        </form>
+        <p><a href="index.html"><button type="button">&larr; Повернутися на головну сторінку</button></a></p>
+    </main>
+</body>
+</html>
